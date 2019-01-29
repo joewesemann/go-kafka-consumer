@@ -1,0 +1,10 @@
+version: '3'
+services:
+  go-kafka-container:
+    build: .
+    command: ["go", "run", "main.go"]
+    volumes:
+      - .:/go/src/go-kafka
+    ports:
+      - "2222:2222"
+    network_mode: "host"
